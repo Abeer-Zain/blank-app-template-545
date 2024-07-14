@@ -215,6 +215,126 @@ from datetime import datetime, time
 #           ''')
 
 # day 16
+# customize the theme of streamlit 
+
+# st.write('Customize theme')
+
+# st.code("""
+#     [theme]
+#         primaryColor ="#F39C12"
+#         backgroundColor = "#2E86C1"
+#         secondryBackgroundColor = "#AED6F1"
+#         textyColor = "#FFFFFF"
+#         font = "monospace"
+#  """)
+
+# numb = st.sidebar.slider('select number ', 0,14,5)
+
+# st.write('selected num ' ,numb)
+
+
+# day 17
+
+# st.header('st.secrets')
+
+# new_var = st.secrets['message']
+# st.write(new_var)
+
+# day 18
+
+# st.header('st.file_uploader')
+
+# st.subheader('csv')
+
+# uploaded_file = st.file_uploader("Choose a file ")
+
+# if uploaded_file is not None:
+#     df = pd.read_csv(uploaded_file)
+#     st.subheader('DataFrame')
+#     st.write(df)
+#     st.subheader('Descriptive Statistics')
+#     st.write(df.describe())
+# else:
+#     st.info(':thumbsup: UPload CSV file')
+
+
+# fileas= st.file_uploader('Choose multi files ' , accept_multiple_files=True)
+
+# for files in fileas:
+#     st.write("filename : ", files.name) 
+   
+
+# day 19
+
+
+# st.set_page_config(layout="wide")
+
+# st.title("How to layout streamlit")
+
+
+# with st.expander('About this app'):
+#     st.write('This is app shows how you layout streamlit ')
+#     st.image('https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png', width=250)
+
+
+
+# st.sidebar.header('Input')
+
+# userName = st.sidebar.text_input('Whats ur name')
+# userEmoji = st.sidebar.selectbox('choose emoji' , ['','😂','❤️','👍'])
+# userFood = st.sidebar.selectbox('Whats ur fav food' , ['','Tom Yum', 'Biryani','Pasta'])
+
+
+# st.header('Output')
+
+# col1 , col2 , col3 = st.columns(3)
+
+# with col1:
+#     if userName != '':
+#         st.write('Hello ' , userName)
+#     else:
+#         st.warning('Enter your name')
+
+# with col2 :
+#     if userEmoji != '':
+#         st.write(userEmoji , " is ur fav **Emoji**")
+#     else:
+#         st.write('Please choose ur fav *Emoji*')
+
+# with col3: 
+#     if userFood != '':
+#         st.write(userFood , ' is ur fav **food**')
+#     else:
+#         st.write ("Choose ur fav foods")
+
+
+# ## testing modals ## #
+
+
+# @st.experimental_dialog("cast your vote")
+# def vote(str):
+#     st.write('why is ' , str , ' ur fav?')
+#     res = st.text_input('Beacuse .... ')
+#     if st.button("Submit"):
+#         st.session_state.vote = {'item':str, 'reason':res}
+#         st.rerun()
+
+# if "vote" not in st.session_state:
+#     st.write("Vote for your fav")
+#     if st.button("A"):
+#         vote('A')
+#     if st.button("B"):
+#         vote('B')
+# else:
+#     f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
+
+
+# day 20
+
+
+
+
+
 
 
 
